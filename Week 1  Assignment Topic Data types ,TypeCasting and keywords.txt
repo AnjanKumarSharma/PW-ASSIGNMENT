@@ -1,0 +1,151 @@
+                  Data Types, Casting, and  Keywords In Java 
+                          Assignment Questions Solution
+1.What are Primitive Data Types in Java?
+Ans:Primitive Data Types in Java is a basic data type provided by java
+    programming language which is used for imforming compiler and JVM
+	what type of data is stored into the variable and it is sub-divided 
+	int 8 group which are as
+	listed below:
+	
+	Primitive DataType        Memory Required
+	
+	1.byte                         1 byte=8 bits
+	2.short                        2 byte=16 bits
+	3.integer                      4 byte=32 bits
+	4.long                         8 byte=64 bits
+	5.char                         2 byte=16 bits
+	6.float                        4 byte=32 bits
+	7.double                       8 byte=64 bits
+	8.boolean                      Depends on OS(but commonly 1 byte)
+
+2.What are the Identifiers in Java?
+Ans:Identifiers in Java is the name given to a class ,variable,
+    package,method,label or interface and allow the programmer to refer to 
+	the specific item from any place in java.
+	
+	Types of Identifier                 Example
+	
+	1.Class Identifier                 class test{}
+	2.Variable Identifier              int age=20;
+	3.Package Identifier               package student;
+	4.Method Identifier                void calculateSum();
+	5.Interface Identifier             interface student{};
+	
+3.What is final class in Java?
+Ans:A final class in Java is a concept of object-oriented programming
+    where a class is declared using the "final" keyword. This type of 
+    class cannot be extended or inherited by other classes, making it 
+	inflexible.
+	We use "final" keyword infront of a class to make that class as
+	final class.A final class in Java cannot be inherited or extended, meaning 
+	that no subclass can be created from it. 
+	In other words, there is no subclass you can find which will inherit the 
+	final class in Java.If a class is complete in nature then we can make it
+	a final class which tells us that it can’t be an abstract class.
+    We use final class for the following purposes:
+    1.To prevent Inheritance
+    2.To create immutable classes	
+	
+4.What are the two ways to make a class final?
+Ans:The two ways to make a class final are as listed below:
+
+    1.Using "final" keyword
+	
+	We use "final" keyword infront of a class to make that class as
+	final class.A final class in Java cannot be inherited or extended,
+	meaning that no subclass can be created from it.
+	Example:
+	     final class student{
+		 //methods and data
+		 }
+	2.Using the sealed concept
+	
+	Some programming languages, like Kotlin and C#, provide a feature 
+	called sealed classes, which is an alternative to the final keyword.
+	Sealed classes restrict the inheritance hierarchy by allowing subclasses
+	only within a specific package or file.
+	Example:
+	sealed class SealedClass {
+       // sealed class members and methods
+    }
+5.Can we create an instance of final class in another class?
+Ans:Yes we create an instance of final class in another class but  Only affect 
+   of final on class is that class cannot be extended.
+   Example: String is a final class, but in almost every code you make an object
+   of it. But we can not extend the String class.
+   
+6.What is volatile keyword used for?
+Ans:The volatile keyword in Java is used to indicate that a variable's value may
+    be modified by multiple threads simultaneously. It ensures that the variable 
+    is always read from and written to the main memory, rather than from thread
+    specific caches, ensuring visibility across threads.
+   
+7.What is the use of Transient Keyword?
+Ans:The transient keyword in Java is used to indicate that a field in a class 
+    should not be serialized. Serialization is the process of converting an object's
+    state into a byte stream so that it can be easily saved to a file or transmitted
+    over a network. When a field is marked as transient, it means that the field's
+    value will not be included in the serialized form of the object.
+	
+8.What are type of casting?
+Ans:The process of converting one primitive data type into the another is known as
+    "TypeCasting".
+    There are two type of casting which as listed below:
+    1.Implicit TypeCasting
+	
+	  In this type of typecasting ,we convert a smaller primitive data type into the 
+	  larger one.
+	  It is done by compiler of java.It is also known as "Widening Typecasting"as 
+	  lower data are stored into the higher one.
+	  
+	  Flow of Conversion
+	  byte -> short -> char -> int -> long -> float -> double
+	  
+	2.Explicit TypeCasting
+	
+	  The process of converting data of higher primitive data type into the lower 
+	  one is known as "Explicit TypeCasting".In this type of typecasting ,there is 
+	  loss of data happens.
+	  It is done by the programmer explicitly.
+	  Since we are narrowing the size of data type that's why it is also known as
+	  "Narrowing TypeCasting".
+
+9.What is boxing and unboxing?
+Ans:The automatic conversion of primitive data types into its equivalent Wrapper 
+   type is known as "Autoboxing".Autoboxing is the process of converting a primitive 
+   value to a corresponding reference object, such as int to Integer, float to Float
+   ,boolean to Boolean ,etc.
+   For example:
+   If you have a list of integers, you can use autoboxing to add primitive values
+   to the list.
+   The automatic conversion of wrapper class type into corresponding primitive type
+   is known as "Unboxing". Unboxing is the process of converting a reference object 
+   to a corresponding primitive value, such as Integer to int. 
+   For example:
+   If you have a list of integers, you can use unboxing to get primitive values 
+   from the list.
+   Autoboxing and unboxing are features that allow the compiler to automatically
+   convert between primitive and reference types, without using explicit cast 
+   operators.
+
+10.What is differen between keywords, identifiers and literals in java?
+Ans: Keywords:
+
+     =>Keywords are reserved words in the Java language.
+     =>They have a specific and predefined meaning in context of language's syntax.
+      Examples: class, public, if, else, int, etc.
+	  
+     Identifiers:
+	 
+ 	 =>Identifiers are names given to various program elements such as classes,
+	 methods, variables, etc.
+     =>They are user-defined and follow certain rules, such as starting with a
+	 letter, being case-sensitive, etc.
+     Examples: variableName, methodName, ClassName, etc.
+	 
+     Literals:
+	 
+	 =>Literals are representation of fixed values in the source code.
+     =>They directly represent values without requiring computation.
+     Examples: 42 (integer literal), 'A' (character literal), "Hello" 
+	 (string literal),3.14 (floating-point literal), etc.
